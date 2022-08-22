@@ -1,0 +1,25 @@
+.left__side {
+  position: absolute;
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  left: 0;
+}
+
+.left__side button {
+  cursor: pointer;
+  width: 50px;
+}
+
+.hid__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: royalblue;
+}

@@ -1,0 +1,46 @@
+@import "css/reset.css";
+@import "screen/leftside.css";
+@import "screen/leftside.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+canvas {
+  width: 150vh;
+  height: 95vh;
+  border: 5px solid black;
+}
+
+.hidden {
+  display: none;
+}
+
+.moving {
+  animation: moving 1s ease-in-out forwards;
+}
+
+.reverseMoving {
+  animation: reverseMoving 1s ease-in-out forwards;
+}
+
+@keyframes moving {
+  from {
+    transform: translateX(-30vh);
+  }
+  to {
+    transform: translateX(0vh);
+  }
+}
+
+@keyframes reverseMoving {
+  from {
+    transform: none;
+  }
+  to {
+    transform: translateX(-90vh);
+  }
+}
