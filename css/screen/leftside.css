@@ -1,7 +1,7 @@
 .left__side {
   position: absolute;
   height: 100%;
-  width: 30%;
+  width: 15%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -19,7 +19,83 @@
   align-items: center;
   flex-direction: column;
   position: absolute;
-  width: 50%;
+  width: 250px;
   height: 100%;
+  gap: 15px;
   background-color: royalblue;
+}
+
+.hid__btn button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 5px solid white;
+  transition: transform ease-in-out 0.1s;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.hid__btn button:hover {
+  transform: scale(1.2);
+}
+
+.hid__colors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  width: 250px;
+  height: 100%;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  background-color: royalblue;
+}
+
+#color {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.color-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.color-option {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 5px solid white;
+  transition: transform ease-in-out 0.1s;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.color-option:hover {
+  transform: scale(1.2);
+}
+
+.hid__range {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  width: 250px;
+  height: 100%;
+  gap: 15px;
+  background-color: royalblue;
+}
+
+#line-width {
+  all: unset;
+  background-color: white;
+  border-radius: 30px;
+  cursor: pointer;
 }

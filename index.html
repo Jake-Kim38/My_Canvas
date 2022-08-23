@@ -9,10 +9,59 @@
   </head>
   <body>
     <div class="left__side">
-      <button class="first__btn">Fill</button>
+      <button class="first__btn">Brush</button>
       <div class="hid__btn hidden">
-        <button>Fill</button>
         <button>Brush</button>
+        <button>Fill</button>
+      </div>
+      <button class="second__btn">Colors</button>
+      <div class="hid__colors hidden">
+        ↓Specific Colors↓
+        <input id="color" type="color" />
+        <div class="color-options">
+          ↓Recommended Colors↓
+          <div
+            class="color-option"
+            style="background-color: #1abc9c"
+            data-color="#1abc9c"
+          ></div>
+          <div
+            class="color-option"
+            style="background-color: #3498db"
+            data-color="#3498db"
+          ></div>
+          <div
+            class="color-option"
+            style="background-color: #34495e"
+            data-color="#34495e"
+          ></div>
+          <div
+            class="color-option"
+            style="background-color: #27ae60"
+            data-color="#27ae60"
+          ></div>
+          <div
+            class="color-option"
+            style="background-color: #8e44ad"
+            data-color="#8e44ad"
+          ></div>
+          <div
+            class="color-option"
+            style="background-color: #f1c40f"
+            data-color="#f1c40f"
+          ></div>
+        </div>
+      </div>
+      <button class="third__btn">Range</button>
+      <div class="hid__range hidden">
+        <input
+          id="line-width"
+          type="range"
+          min="1"
+          max="10"
+          value="5"
+          step="0.1"
+        />
       </div>
     </div>
 
