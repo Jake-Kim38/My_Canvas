@@ -1,12 +1,14 @@
 @import "css/reset.css";
 @import "screen/leftside.css";
 @import "screen/leftside.css";
+@import "screen/rightside.css";
 
 body {
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
+  max-width: 100%;
 }
 
 canvas {
@@ -26,6 +28,14 @@ canvas {
 
 .reverseMoving {
   animation: reverseMoving 1s ease-in-out forwards;
+}
+
+.rightmoving {
+  animation: rightMoving 1s ease-in-out forwards;
+}
+
+.rightreverseMoving {
+  animation: reverseRightMoving 1s ease-in-out forwards;
 }
 
 @keyframes moving {

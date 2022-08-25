@@ -17,6 +17,11 @@ const rangeBtn = document.querySelector(".third__btn");
 const hidRange = document.querySelector(".hid__range");
 const lineWidth = document.querySelector("#line-width");
 
+const eraseBtn = document.querySelector(".fourth__btn");
+const hidErase = document.querySelector(".hid__erase");
+const hidBtnErase = document.querySelector(".hid__erase button:first-child");
+const hidBtnDestroy = document.querySelector(".hid__erase button:last-child");
+
 const CANVAS_WIDTH = 800;
 const CANVAS_HEIGHT = 550;
 canvas.width = CANVAS_WIDTH;
@@ -26,6 +31,7 @@ ctx.lineWidth = lineWidth.value;
 
 let isPainting = false;
 let isFilling = false;
+let isErase = false;
 
 function handleFillClickOne() {
   hidBtn.classList.remove("hidden");
@@ -117,6 +123,45 @@ function onLineWidthChange(event) {
   ctx.lineWidth = event.target.value;
 }
 
+function handleEraseClickOne() {
+  hidErase.classList.remove("hidden");
+  hidErase.classList.toggle("moving");
+  if (hidErase.classList.contains("reverseMoving")) {
+    hidErase.classList.remove("reverseMoving");
+  }
+}
+
+function handleEraseClickTwo() {
+  hidErase.classList.toggle("reverseMoving");
+  hidErase.classList.remove("moving");
+}
+
+function onModeEraseClick(event) {
+  const clue = event.target.innerText;
+  if (clue == "Erase") {
+    isErase = true;
+    eraseBtn.innerText = "Erase";
+  } else if (clue == "Destroy") {
+    isErase = false;
+    eraseBtn.innerText = "Destroy";
+  }
+}
+
+function onEraseClick() {
+  ctx.strokeStyle = "white";
+  isFilling = false;
+  fillBtn.innerText = "Brush";
+}
+
+function onDestroyClick() {
+  if (confirm("Are you sure to Destroy?")) {
+    ctx.fillStyle = "white";
+    ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  } else {
+    alert("Think One More Time.");
+  }
+}
+
 function hello() {
   alert("hello");
 }
@@ -139,3 +184,8 @@ colorOptions.forEach((color) => color.addEventListener("click", onColorClick));
 rangeBtn.addEventListener("click", handleRangeClickOne);
 hidRange.addEventListener("click", handleRangeClickTwo);
 lineWidth.addEventListener("change", onLineWidthChange);
+
+eraseBtn.addEventListener("click", handleEraseClickOne);
+hidErase.addEventListener("click", handleEraseClickTwo);
+hidBtnErase.addEventListener("click", onEraseClick);
+hidBtnDestroy.addEventListener("click", onDestroyClick);

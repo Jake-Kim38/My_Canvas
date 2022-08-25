@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
   left: 0;
 }
 
@@ -98,4 +99,32 @@
   background-color: white;
   border-radius: 30px;
   cursor: pointer;
+}
+
+.hid__erase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  width: 250px;
+  height: 100%;
+  gap: 15px;
+  background-color: royalblue;
+}
+
+.hid__erase button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 5px solid white;
+  transition: transform ease-in-out 0.1s;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.hid__erase button:hover {
+  transform: scale(1.2);
 }
