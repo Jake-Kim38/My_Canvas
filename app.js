@@ -22,6 +22,11 @@ const hidErase = document.querySelector(".hid__erase");
 const hidBtnErase = document.querySelector(".hid__erase button:first-child");
 const hidBtnDestroy = document.querySelector(".hid__erase button:last-child");
 
+const textInput = document.querySelector("#text");
+const textSize = document.querySelector("#fontSizes");
+const textFont = document.querySelector("#fontTypes");
+const textBold = document.querySelector("#fontWeights");
+
 const CANVAS_WIDTH = 800;
 const CANVAS_HEIGHT = 550;
 canvas.width = CANVAS_WIDTH;
@@ -162,6 +167,20 @@ function onDestroyClick() {
   }
 }
 
+function onDoubleClick(event) {
+  const text = textInput.value;
+  const mySize = textSize.value;
+  const myFont = textFont.value;
+  const myBold = textBold.value;
+  if (text !== "") {
+    ctx.save();
+    ctx.lineWidth = 1;
+    ctx.font = `${myBold} ${mySize}px ${myFont}`;
+    ctx.fillText(text, event.offsetX, event.offsetY);
+    ctx.restore();
+  }
+}
+
 function hello() {
   alert("hello");
 }
@@ -170,6 +189,7 @@ canvas.addEventListener("mousemove", onMove);
 canvas.addEventListener("mousedown", startPainting);
 canvas.addEventListener("mouseup", cancelPainting);
 canvas.addEventListener("click", onCanvasClick);
+canvas.addEventListener("dblclick", onDoubleClick);
 
 fillBtn.addEventListener("click", handleFillClickOne);
 hidBtn.addEventListener("click", handleFillClickTwo);

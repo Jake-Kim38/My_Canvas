@@ -70,6 +70,81 @@
       </div>
     </div>
 
+    <div class="right__side">
+      <fieldset>
+        <legend>Text</legend>
+        <div class="tools__text">
+          <input type="number" min="1" value="25" id="fontSizes" />
+          <select id="fontTypes" autocomplete="off" required="">
+            <option value="serif" style="font-family: serif">Serif</option>
+            <option value="sans-serif" style="font-family: sans-serif">
+              Sans-serif
+            </option>
+            <option value="courier new" style="font-family: courier new">
+              Courier New
+            </option>
+            <option value="Lucida Console" style="font-family: Lucida Console">
+              Lucida Console
+            </option>
+            <option value="cursive" style="font-family: cursive">
+              Cursive
+            </option>
+            <option
+              value="Brush Script MT"
+              style="font-family: Brush Script MT"
+            >
+              Brush Script MT
+            </option>
+            <option
+              value="lucida Handwriting"
+              style="font-family: lucida Handwriting"
+            >
+              Lucida Handwriting
+            </option>
+            <option value="copperplate" style="font-family: copperplate">
+              Copperplate
+            </option>
+            <option value="papyrus" style="font-family: Papyrus">
+              Papyrus
+            </option>
+            <option
+              value="'Noto Sans KR', sans-serif"
+              style="font-family: 'Noto Sans KR', sans-serif"
+            >
+              Noto Sans 한글
+            </option>
+            <option
+              value="'Nanum Myeongjo', serif"
+              style="font-family: 'Nanum Myeongjo', serif"
+            >
+              나눔 명조
+            </option>
+            <option
+              value="'Nanum Pen Script', cursive"
+              style="font-family: 'Nanum Pen Script', cursive"
+            >
+              나눔펜
+            </option>
+            <option
+              value="'Jua', sans-serif"
+              style="font-family: 'Jua', sans-serif"
+            >
+              주아
+            </option>
+          </select>
+          <select id="fontWeights" required="">
+            <option value="normal" selected="">Normal</option>
+            <option value="bolder">Bold</option>
+          </select>
+        </div>
+        <input
+          type="text"
+          placeholder="Add text, DoubleClick to Execute"
+          id="text"
+        />
+      </fieldset>
+    </div>
+
     <canvas></canvas>
     <script src="app.js"></script>
   </body>
