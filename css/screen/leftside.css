@@ -9,9 +9,25 @@
   left: 0;
 }
 
-.left__side button {
+.first__btn,
+.second__btn,
+.third__btn,
+.fourth__btn {
   cursor: pointer;
-  width: 50px;
+  padding: 20px 50px;
+  border-radius: 3.75rem;
+  line-height: 2.5rem;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  transition: transform ease-in-out 0.1s;
+
+  border: 1px solid #012880;
+  background-image: linear-gradient(-180deg, #ff89d6 0%, #c01f9e 100%);
+  box-shadow: 0 1rem 1.25rem 0 rgba(22, 75, 195, 0.5),
+    0 -0.25rem 1.5rem rgba(110, 15, 155, 1) inset,
+    0 0.75rem 0.5rem rgba(255, 255, 255, 0.4) inset,
+    0 0.25rem 0.5rem 0 rgba(180, 70, 207, 1) inset;
 }
 
 .hid__btn {
@@ -20,7 +36,7 @@
   align-items: center;
   flex-direction: column;
   position: absolute;
-  width: 250px;
+  width: 300px;
   height: 100%;
   gap: 15px;
   background-color: royalblue;
@@ -38,8 +54,8 @@
   font-size: 20px;
 }
 
-.hid__btn button:hover {
-  transform: scale(1.2);
+.left__side button:hover {
+  transform: scale(1.1);
 }
 
 .hid__colors {
@@ -48,7 +64,7 @@
   align-items: center;
   flex-direction: column;
   position: absolute;
-  width: 250px;
+  width: 300px;
   height: 100%;
   font-weight: 600;
   font-size: 18px;
@@ -88,7 +104,7 @@
   align-items: center;
   flex-direction: column;
   position: absolute;
-  width: 250px;
+  width: 300px;
   height: 100%;
   gap: 15px;
   background-color: royalblue;
@@ -107,7 +123,7 @@
   align-items: center;
   flex-direction: column;
   position: absolute;
-  width: 250px;
+  width: 300px;
   height: 100%;
   gap: 15px;
   background-color: royalblue;

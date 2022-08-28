@@ -27,6 +27,10 @@ const textSize = document.querySelector("#fontSizes");
 const textFont = document.querySelector("#fontTypes");
 const textBold = document.querySelector("#fontWeights");
 
+const fileInput = document.querySelector("#file");
+
+const saveBtn = document.querySelector("#save");
+
 const CANVAS_WIDTH = 800;
 const CANVAS_HEIGHT = 550;
 canvas.width = CANVAS_WIDTH;
@@ -181,8 +185,23 @@ function onDoubleClick(event) {
   }
 }
 
-function hello() {
-  alert("hello");
+function onFileChange(event) {
+  const file = event.target.files[0];
+  const url = URL.createObjectURL(file);
+  const image = new Image();
+  image.src = url;
+  image.onload = function () {
+    ctx.drawImage(image, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+    fileInput.value = null;
+  };
+}
+
+function onSaveClick() {
+  const url = canvas.toDataURL();
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "myPicture.png";
+  a.click();
 }
 
 canvas.addEventListener("mousemove", onMove);
@@ -209,3 +228,7 @@ eraseBtn.addEventListener("click", handleEraseClickOne);
 hidErase.addEventListener("click", handleEraseClickTwo);
 hidBtnErase.addEventListener("click", onEraseClick);
 hidBtnDestroy.addEventListener("click", onDestroyClick);
+
+fileInput.addEventListener("change", onFileChange);
+
+saveBtn.addEventListener("click", onSaveClick);
